@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+#background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(
+    circle at 20% 30%,
+    #202024,
+    #0f0f12 60%
+  );
+}
+
+.bg-shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(160px);
+  opacity: 0.06;
+  z-index: 1;
+  pointer-events: none;
+  animation: float 12s ease-in-out infinite alternate;
+}
+@keyframes float {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-30px);
+  }
+}
+
+.shape-1 {
+  width: 300px;
+  height: 300px;
+  background: #ffffff;
+  top: 10%;
+  left: 5%;
+  opacity: 0.18;
+}
+
+.shape-2 {
+  width: 250px;
+  height: 250px;
+  background: #ffffff;
+  bottom: 10%;
+  right: 10%;
+  opacity: 0.22;
+}
+
+#container {
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+#img img {
+    width: 32rem;
+}
+
+#calculator {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    color: #f8fafc;
+    background-color: #262626;
+    border-radius: 10px;
+    position: relative;
+    z-index: 3;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#title {
+    font-size: 2.25rem;
+    position: relative;
+}
+
+#title::after {
+    position: absolute;
+    content: '';
+    background-color: #F2994A;
+    width: 8rem;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    border-radius: 5px;
+}
+
+.input-box label {
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    font-weight: 500;
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3f3f46;
+    padding: 0.3rem;
+    border-radius: 5px;
+    margin-top: 3px;
+}
+
+.input-field span,
+.input-field i {
+    color: #cbd5e1;
+    font-size: 1.3rem;
+    padding: 0.6rem 1rem;
+    min-width: 48px;
+    text-align: center;
+}
+
+.input-field input {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    font-size: 1.3rem;
+    color: #f8fafc;
+    padding: 0 0.5rem;
+}
+
+.input-field input::-webkit-outer-spin-button,
+.input-field input::-webkit-inner-spin-button{
+    appearance: none;
+}
+
+.input-field input:focus {
+    outline: none;
+}
+
+.input-field:focus-within {
+  box-shadow: 0 0 0 2px #f2984a94;
+}
+
+#calculate {
+    border: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    background-color: #F2994A;
+    color: #f8fafc;
+    padding: 0.5rem 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+#calculate:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px #f2994a40;
+}
+
+#calculate:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px #f2994a30;
+}
+
+#result {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    border-top: 1px solid #ffffff34;
+    padding: 0.75rem 0;
+
+}
+
+#bmi {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2.25rem;
+}
+
+#bmi span:last-child {
+    font-size: 0.875 rem;
+    color: #cbd5e1;
+}
+
+#description {
+    width: 15.5rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.normal {
+    color: #16a34a;
+}
+
+.attention {
+    color: #dc2626;
+}
